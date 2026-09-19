@@ -21,7 +21,7 @@ jobs:
       - name: Zainstaluj Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.10'
+          gradle-version: 'current'
 
       - name: Zbuduj (gradle shadowJar)
         working-directory: dynamosync
