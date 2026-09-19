@@ -1,0 +1,17 @@
+name: DynamoSync
+version: '1.0.0'
+main: pl.twojserwer.dynamosync.DynamoSyncPlugin
+api-version: '1.21'
+author: TwojServer
+description: Zapisuje dane graczy w AWS DynamoDB (eu-central-1)
+
+commands:
+  playerdata:
+    description: Odczyt/zapis danych gracza w DynamoDB
+    usage: /playerdata <get|set> <gracz> <klucz> [wartosc]
+    permission: dynamosync.admin
+
+permissions:
+  dynamosync.admin:
+    description: Dostep do komendy /playerdata
+    default: op
