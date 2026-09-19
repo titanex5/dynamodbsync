@@ -9,6 +9,7 @@ import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.http.urlconnection.UrlConnectionHttpClient;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
+import software.amazon.awssdk.services.dynamodb.DynamoDbClientBuilder;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -47,7 +48,7 @@ public final class DynamoSyncPlugin extends JavaPlugin {
         });
 
         try {
-            DynamoDbClient.Builder clientBuilder = DynamoDbClient.builder()
+            DynamoDbClientBuilder clientBuilder = DynamoDbClient.builder()
                     .region(Region.of(region))
                     .httpClientBuilder(UrlConnectionHttpClient.builder());
 
